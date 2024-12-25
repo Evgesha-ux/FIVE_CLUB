@@ -130,7 +130,7 @@ body, html {
   }
   
   .main-background {
-    background-image: url('image/background_img.png');
+    background-image: url('img/background_img.PNG');
     background-size: cover;
     background-position: center;
     display: flex;

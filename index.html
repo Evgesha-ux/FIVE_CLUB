@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIVE CLUB</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar__container">
+
+            <div class="logo-contact">
+                <div class="logo">
+                    <img src="image/logo.PNG" class="logo" id="logo">
+                </div>
+                <a href="tel:+79616770116" class="contact-phone">+7 (961) 677 01 16</a>
+                <script>
+                    const logo = document.getElementById('logo');
+                    logo.addEventListener('click', function() {
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                    });
+                </script>
+            </div>
+
+            <nav class="nav-links">
+                <div class="nav-item">
+                    <span><a href="#KLUB" class="nav-text">Клубы</a></span>
+                    <svg class="dropdown-icon" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                        <path d="M1 3L5 7L9 3" stroke="#FFFFFF" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="nav-item">
+                    <span><a href="#Абонементы" class="nav-text">Абонементы</a></span>
+                    <svg class="dropdown-icon" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                        <path d="M1 3L5 7L9 3" stroke="#FFFFFF" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="nav-item">
+                    <span><a href="#О_нас" class="nav-text">Фото</a></span>
+                    <svg class="dropdown-icon" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                        <path d="M1 3L5 7L9 3" stroke="#FFFFFF" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="nav-item">
+                    <span><a href="#Услуги" class="nav-text">Услуги</a></span>
+                    <svg class="dropdown-icon" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                        <path d="M1 3L5 7L9 3" stroke="#FFFFFF" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="nav-item">
+                    <span><a href="#Гравфик_работы" class="nav-text">График работы</a></span>
+                    <svg class="dropdown-icon" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                        <path d="M1 3L5 7L9 3" stroke="#FFFFFF" stroke-width="2"/>
+                    </svg>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <script src="script.js"></script>
+    <div class="main-background">
+        <div class="content-area">
+          <h1 class="title">FIVE CLUB ФИТНЕС-КЛУБ</h1>
+          <h2 class="subtitle">ПРЕМИУМ КЛАССА В МОСКВЕ</h2>
+          <p class="description">
+            Безупречный сервис, просторные залы с высокотехнологичными тренажерами, комфорт и высококвалифицированные спортсмены-тренеры – вот составляющие успеха наших клубов
+          </p>
+          <button class="select-club-button">
+            <span class="button-text"><a href="#KLUB" class="nav-text">Выбрать клуб</a></span>
+          </button>
+        </div>
+      </div>
+      <div class="container">
+        <header class="header" id="KLUB">
+            <h1 class="header__title">СИЛА В КАЖДОМ ДВИЖЕНИИ</h1>
+            <h2 class="header__subtitle">ЗДОРОВЬЕ В КАЖДОМ ДНЕ</h2>
+        </header>
+        <main class="content">
+            <section class="cities" aria-label="Выбор города">
+                <button class="city-btn" data-city="moscow">Москва</button>
+                <button class="city-btn" data-city="spb">Санкт-Петербург</button>
+                <button class="city-btn" data-city="volgograd">Волгоград</button>
+                <button class="city-btn" data-city="kamyshin">Камышин</button>
+                <button class="city-btn" data-city="kazan">Казань</button>
+                <button class="city-btn" data-city="krasnodar">Краснодар</button>
+            </section>
+                <section class="club-info" aria-label="Информация о клубе">
+                    <h3 class="club-info__title">FIVE CLUB</h3>
+                    <p class="club-info__address">г. Москва, Лиственничная аллея 16а, к 3</p>
+                </section>
+            </main>
+    </div>
+    <script src="script.js"></script>
+    <div class="carousel" aria-label="Image carousel">
+        <button class="carousel-button prev" aria-label="Previous slide">
+            <img src="/image/Vector.PNG">
+        </button>
+
+        <div class="carousel-container" id="О_нас">
+            <div class="carousel-track">
+                <div class="carousel-slide" aria-hidden="false">
+                    <img src="/image/1.JPG" alt="Slide 1">
+                </div>
+                <div class="carousel-slide" aria-hidden="true">
+                    <img src="/image/2.JPG" alt="Slide 2">
+                </div>
+                <div class="carousel-slide" aria-hidden="true">
+                    <img src="/image/3.JPG" alt="Slide 3">
+                </div>
+                <div class="carousel-slide" aria-hidden="true">
+                    <img src="/image/4.JPG" alt="Slide 4">
+                </div>
+                <div class="carousel-slide" aria-hidden="true">
+                    <img src="/image/background_img.PNG" alt="Slide 5">
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-button next" aria-label="Next slide">
+            <img src="/image/Vector1.PNG">
+        </button>
+
+        <div class="carousel-indicators" role="tablist">
+            <button class="indicator active" role="tab" aria-selected="true" aria-label="Slide 1"></button>
+            <button class="indicator" role="tab" aria-selected="false" aria-label="Slide 2"></button>
+            <button class="indicator" role="tab" aria-selected="false" aria-label="Slide 3"></button>
+            <button class="indicator" role="tab" aria-selected="false" aria-label="Slide 4"></button>
+            <button class="indicator" role="tab" aria-selected="false" aria-label="Slide 5"></button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <div class="main-container">
+        <header class="header">
+            <div>
+                <h1 class="main-title" id="Услуги">ТОЛЬКО КАЧЕСТВЕННЫЕ</h1>
+                <h2 class="subtitle">ФИТНЕС-УСЛУГИ</h2>
+            </div>
+        </header>
+
+        <div class="content-grid">
+            <div class="grid-item">
+                <div class="image-container">
+                    <img src="/image/Персональные тренировки.JPG" alt="Квалифицированный персонал" class="grid-image">
+                    <h3 class="image-title">КВАЛИФИЦИРОВАННЫЙ ПЕРСОНАЛ</h3>
+                </div>
+            </div>
+
+            <div class="grid-item">
+                <div class="image-container">
+                    <img src="/image/оборудование.JPG" alt="Новейшее оборудование" class="grid-image">
+                    <h3 class="image-title">НОВЕЙШЕЕ ОБОРУДОВАНИЕ</h3>
+                </div>
+            </div>
+
+            <div class="grid-item">
+                <div class="image-container">
+                    <img src="/image/персональные.PNG" alt="Персональные тренировки" class="grid-image">
+                    <h3 class="image-title">ПЕРСОНАЛЬНЫЕ ТРЕНИРОВКИ</h3>
+                </div>
+            </div>
+
+            <div class="grid-item">
+                <div class="image-container">
+                    <img src="/image/раздевалки.JPG" alt="Удобные раздевалки" class="grid-image">
+                    <h3 class="image-title">УДОБНЫЕ РАЗДЕВАЛКИ И ДУШЕВЫЕ КАБИНЫ</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <div class="subscription-container">
+        <header class="header">
+            <h1 class="title" id="Абонементы">АБОНЕМ<span class="highlight">Е</span>НТЫ</h1>
+        </header>
+        
+        <div class="subscription-options">
+            <div class="subscription-card">
+                <h2 class="plan-title">classic</h2>
+                <ul class="features-list">
+                    <li>Доступ к тренажерному залу</li>
+                    <li>Гибкие условия</li>
+                    <li>Консультации с тренерами</li>
+                    <li>Тренировочные программы</li>
+                </ul>
+                <div class="price">2000руб в мес</div>
+            </div>
+
+            <div class="subscription-card">
+                <h2 class="plan-title">with pro</h2>
+                <ul class="features-list">
+                    <li>Индивидуальные тренировки</li>
+                    <li>Оценка физ. подготовки</li>
+                    <li>Доступ к тренажерному залу</li>
+                    <li>Коррекция техники</li>
+                </ul>
+                <div class="price">2300руб. в мес</div>
+            </div>
+            <div class="subscription-card">
+                <h2 class="plan-title">arm wrestling</h2>
+                <ul class="features-list">
+                    <li>Регулярные тренировки</li>
+                    <li>Участие в соревнованиях</li>
+                    <li>Консультации по питанию</li>
+                    <li>Тренировочные материалы</li>
+                </ul>
+                <div class="price" id="Гравфик_работы">2600руб. в мес.</div>
+            </div>
+        </div>
+    </div>
+    <main class="main-container1">
+        <!-- Operating Hours Section -->
+        <section class="operating-hours">
+            <h2 class="section-title">ГРАФИК РАБОТЫ</h2>
+            <p class="hours-text">пн-чт с <span class="accent">15:00</span> до <span class="accent">22:00</span></p>
+            <p class="hours-text">пт-вс с <span class="accent">10:00</span> до <span class="accent">23:00</span></p>
+        </section>
+
+        <!-- Partners Section -->
+        <section class="partners-section">
+            <h2 class="section-title">ПАРТНЁРЫ</h2>
+            <div class="partners-logos">
+                <img src="/image/калаш.JPG" alt="Kalashnikov Logo" class="partner-logo">
+                <img src="/image/стас.JPG" alt="Gymtim Logo" class="partner-logo">
+                <img src="/image/старый.JPG" alt="Nature's Canvas Logo" class="partner-logo">
+            </div>
+        </section>
+    </main>
+    <div class="container1">
+        <header>
+        <img src="image/logo.PNG" class="logo1">
+        </header>
+        <main>
+        <h1>Скачайте приложение<br>для управления клубной картой</h1>
+        <div class="qr-and-links">
+            <img src="/image/qr-code.PNG" alt="QR Code" class="qr-code">
+            <div class="app-links">
+                <a class="app-store-link">
+                    <img src="/image/Снимок экрана 2024-12-25 224645.PNG" alt="Google Play">
+                </a>
+                <a class="app-store-link">
+                    <img src="/image/Снимок экрана 2024-12-25 224616.PNG" alt="App Store">
+                </a>
+            </div>
+        </div>
+        </main>
+        <footer>
+        <p>© FIVE CLUB 2024 | Все права защищены.</p>
+        <p>Копирование материалов данного сайта без разрешения правообладателя запрещено.</p>
+        <div class="footer-links">
+            <a href="#">Документы</a>
+            <a href="#">Как купить абонемент</a>
+            <a href="#">Оплата покупки</a>
+            <a href="#">Правила возврата</a>
+            <a href="#">Политика конфиденциальности</a>
+        </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

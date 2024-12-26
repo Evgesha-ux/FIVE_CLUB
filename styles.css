@@ -599,7 +599,6 @@ body {
     margin-top: 20px;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .subscription-card {
         max-width: 100%;
@@ -647,7 +646,6 @@ body {
     padding: var(--spacing-base);
 }
 
-/* Operating Hours Section */
 .operating-hours {
     background-color: var(--gray);
     padding: var(--spacing-base);
@@ -674,7 +672,6 @@ body {
     color: var(--orange);
 }
 
-/* Partners Section */
 .partners-section {
     padding: var(--spacing-base);
     display: flex;

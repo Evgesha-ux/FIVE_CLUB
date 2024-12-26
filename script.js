@@ -1,20 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Get all nav items
+
     const navItems = document.querySelectorAll('.nav-item');
 
-    // Handle nav item clicks
     navItems.forEach(item => {
         item.addEventListener('click', function() {
-            // Remove active class from all items
             navItems.forEach(navItem => {
                 navItem.classList.remove('nav-item--active');
             });
             
-            // Add active class to clicked item
             this.classList.add('nav-item--active');
         });
 
-        // Handle hover effects
         item.addEventListener('mouseenter', function() {
             const dropdownIcon = this.querySelector('.dropdown-icon');
             dropdownIcon.style.transform = 'rotate(180deg)';
@@ -26,12 +22,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Mobile menu functionality
     function createMobileMenu() {
         const navbar = document.querySelector('.navbar__container');
         const navLinks = document.querySelector('.nav-links');
         
-        // Create mobile menu button if it doesn't exist
         if (!document.querySelector('.mobile-menu-button')) {
             const mobileMenuButton = document.createElement('button');
             mobileMenuButton.classList.add('mobile-menu-button');
@@ -45,7 +39,6 @@ document.addEventListener('DOMContentLoaded', function() {
             
             navbar.appendChild(mobileMenuButton);
 
-            // Toggle mobile menu
             mobileMenuButton.addEventListener('click', () => {
                 navLinks.classList.toggle('active');
                 mobileMenuButton.classList.toggle('active');
@@ -53,7 +46,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Handle window resize
     function handleResize() {
         if (window.innerWidth <= 768) {
             createMobileMenu();
@@ -66,13 +58,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Initial check
     handleResize();
 
-    // Listen for window resize
     window.addEventListener('resize', handleResize);
 
-    // Close mobile menu when clicking outside
     document.addEventListener('click', (e) => {
         const navLinks = document.querySelector('.nav-links');
         const mobileMenuButton = document.querySelector('.mobile-menu-button');
@@ -90,7 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const clubTitle = document.querySelector('.club-info__title');
     const clubAddress = document.querySelector('.club-info__address');
 
-    // Club information for each city
     const clubInfo = {
         moscow: {
             title: 'FIVE CLUB',
@@ -120,13 +108,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     cityButtons.forEach(button => {
         button.addEventListener('click', () => {
-            // Remove active class from all buttons
+
             cityButtons.forEach(btn => btn.classList.remove('city-btn--active'));
             
-            // Add active class to clicked button
             button.classList.add('city-btn--active');
             
-            // Update club information
             const cityData = clubInfo[button.dataset.city];
             clubTitle.textContent = cityData.title;
             clubAddress.textContent = cityData.address;
@@ -151,7 +137,6 @@ class Carousel {
     }
 
     init() {
-        // Event listeners
         this.prevButton.addEventListener('click', () => this.prev());
         this.nextButton.addEventListener('click', () => this.next());
         
@@ -159,13 +144,11 @@ class Carousel {
             indicator.addEventListener('click', () => this.goToSlide(index));
         });
 
-        // Keyboard navigation
         document.addEventListener('keydown', (e) => {
             if (e.key === 'ArrowLeft') this.prev();
             if (e.key === 'ArrowRight') this.next();
         });
 
-        // Touch events
         this.track.addEventListener('touchstart', (e) => {
             this.touchStartX = e.touches[0].clientX;
         });
@@ -175,7 +158,6 @@ class Carousel {
             this.handleSwipe();
         });
 
-        // Initial state
         this.updateCarousel();
     }
 
@@ -208,15 +190,12 @@ class Carousel {
     }
 
     updateCarousel() {
-        // Update slide positions
         this.track.style.transform = `translateX(-${this.currentIndex * 100}%)`;
 
-        // Update slides' aria-hidden
         this.slides.forEach((slide, index) => {
             slide.setAttribute('aria-hidden', index !== this.currentIndex);
         });
 
-        // Update indicators
         this.indicators.forEach((indicator, index) => {
             indicator.classList.toggle('active', index === this.currentIndex);
             indicator.setAttribute('aria-selected', index === this.currentIndex);
@@ -224,11 +203,9 @@ class Carousel {
     }
 }
 
-// Initialize carousel when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     new Carousel();
 });
-// Add hover effect to grid items
 document.querySelectorAll('.grid-item').forEach(item => {
     item.addEventListener('mouseenter', function() {
         this.querySelector('.image-container').style.transform = 'scale(1.02)';
@@ -240,7 +217,6 @@ document.querySelectorAll('.grid-item').forEach(item => {
     });
 });
 
-// Ensure images are loaded before displaying
 document.addEventListener('DOMContentLoaded', function() {
     const images = document.querySelectorAll('.grid-image');
     images.forEach(img => {
